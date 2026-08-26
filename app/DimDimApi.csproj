@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <RootNamespace>DimDimApi</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Driver ADO.NET para PostgreSQL. Unico pacote externo do projeto. -->
+    <PackageReference Include="Npgsql" Version="8.0.5" />
+  </ItemGroup>
+
+</Project>
