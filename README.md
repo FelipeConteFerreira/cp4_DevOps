@@ -55,7 +55,6 @@ dos dados do banco em uma **Storage Account**.
 ├── tests/                  # JSONs de teste (POST/PUT) + roteiro de testes
 ├── docker-compose.yml      # Build + execução LOCAL (antes de subir na nuvem)
 ├── .env.example            # Modelo de variáveis (copie para .env, não versionar)
-└── FOLHA_DE_ROSTO_MODELO.md
 ```
 
 ## Pré-requisitos
