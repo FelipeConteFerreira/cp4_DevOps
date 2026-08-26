@@ -1,0 +1,39 @@
+# =============================================================================
+# docker-compose.yml - USO LOCAL, para build e teste antes de subir na nuvem
+# (etapas 4 e 5 do checkpoint: "Realizar o Build das imagens localmente" e
+# "Testar localmente"). O deploy real em nuvem e feito via Azure CLI
+# (ver pasta azure/), nao via compose.
+# =============================================================================
+services:
+  db:
+    build:
+      context: ./db
+    container_name: dimdim-db-local
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: dimdimdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - dimdim-db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d dimdimdb"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  app:
+    build:
+      context: ./app
+    container_name: dimdim-app-local
+    environment:
+      DB_CONNECTION_STRING: "Host=db;Port=5432;Database=dimdimdb;Username=${DB_USER};Password=${DB_PASSWORD}"
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  dimdim-db-data:
