@@ -1,0 +1,12 @@
+# Segredos - NUNCA versionar
+.env
+*.env
+!.env.example
+
+# Build outputs .NET
+app/bin/
+app/obj/
+
+# SO
+.DS_Store
+Thumbs.db
