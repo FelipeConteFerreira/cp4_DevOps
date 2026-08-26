@@ -1,0 +1,7 @@
+{
+  "descricao_do_teste": "GET - lista todas as transacoes (nao usa corpo/body)",
+  "metodo": "GET",
+  "url_local": "http://localhost:8080/api/transacoes",
+  "url_nuvem": "http://<DNS_LABEL_APP>.<REGIAO>.azurecontainer.io:8080/api/transacoes",
+  "url_por_id_local": "http://localhost:8080/api/transacoes/{id}"
+}

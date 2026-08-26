@@ -1,0 +1,7 @@
+{
+  "descricao_do_teste": "DELETE - remove uma transacao pelo id (nao usa corpo/body)",
+  "metodo": "DELETE",
+  "url_local": "http://localhost:8080/api/transacoes/{id}",
+  "url_nuvem": "http://<DNS_LABEL_APP>.<REGIAO>.azurecontainer.io:8080/api/transacoes/{id}",
+  "exemplo": "http://localhost:8080/api/transacoes/2"
+}

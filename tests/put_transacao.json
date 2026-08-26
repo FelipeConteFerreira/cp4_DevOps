@@ -1,0 +1,7 @@
+{
+  "descricao": "Pagamento de mensalidade via DimDim (atualizado)",
+  "valor": 149.90,
+  "remetente": "conta_felipe",
+  "destinatario": "conta_dimdim_loja",
+  "status": "CONCLUIDA"
+}
