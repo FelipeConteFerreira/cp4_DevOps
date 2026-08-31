@@ -133,7 +133,7 @@ Todos os recursos abaixo são criados **exclusivamente via Azure CLI**
    versionado) e faça login:
 
    ```bash
-   export DB_PASSWORD='EscolhaUmaSenhaForte123!'
+   export DB_PASSWORD='SanSao123!'
    cd azure
    ./01-login.sh
    ```
